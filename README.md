@@ -1,4 +1,25 @@
-## Hi there 👋
+# Hi, I'm Mohammed Anas 👋
+
+🎓 BS Artificial Intelligence Student | Passionate about AI, Computer Vision, and NLP  
+🚀 Currently building real-world AI projects and actively seeking internship opportunities
+
+## 💻 My Projects
+- 🔍 **Vehicle Detection & Tracking:** (https://github.com/Anas039/vehicle_detection.git)(#)
+- 🤸‍♂️ **Pose Estimation:** Real-time body pose tracking using MediaPipe [GitHub Repo](#)
+- 🖐️ **Virtual Calculator:** Gesture-based calculator using hand tracking [GitHub Repo](#)
+- 📰 **News Fact Checker:**(https://github.com/Anas039/news_fact_checker.git)(#)
+- 🦠 **Malaria Diagnosis:** CNN-based medical image classifier [GitHub Repo](#)
+- 🚗 **Car Price Prediction:** Machine learning regression model for car prices [GitHub Repo](#)
+
+## 🛠️ Tech Stack
+- Python | OpenCV | YOLO | TensorFlow | Scikit-Learn | Streamlit | Google Colab | NLP | Machine Learning
+
+## 📫 Contact Me
+- LinkedIn: www.linkedin.com/in/muhammad-anas10
+- Email: miananas.info@gmail.com
+
+---
+> 💡 *Always learning, building, and improving.*
 
 <!--
 **anasdev-10/anasdev-10** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

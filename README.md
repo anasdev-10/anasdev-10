@@ -8,7 +8,7 @@
 -  **Pose Estimation:** Real-time body pose tracking using MediaPipe 
 -  **Virtual Calculator:** Gesture-based calculator using hand tracking 
 -  **News Fact Checker:**(https://github.com/Anas039/news_fact_checker.git)
--  **Malaria Diagnosis:** CNN-based medical image classifier
+-  **Malaria Diagnosis:** (https://github.com/anasdev-10/malaria-diagnosis)
 -  **Car Price Prediction:** Machine learning regression model for car prices 
 
 ## 🛠️ Tech Stack

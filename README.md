@@ -1,6 +1,6 @@
 # Hi, I'm Mohammed Anas 👋
 
-🎓 BS Artificial Intelligence Student | Passionate about AI, Computer Vision, and NLP  
+🎓 BS Artificial Intelligence | Passionate about AI, Computer Vision, and NLP  
 🚀 Currently building real-world AI projects and actively seeking internship opportunities
 
 ## 💻 My Projects

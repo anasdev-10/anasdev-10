@@ -1,7 +1,7 @@
 # Hi, I'm Mohammed Anas 👋
 
 🎓 BS Artificial Intelligence | Passionate about AI, Computer Vision, and NLP  
-🚀 Currently building real-world AI projects and actively seeking internship opportunities
+🚀 Currently building real-world AI projects.
 
 ## 🛠️ Tech Stack
 - Python | OpenCV | YOLO | TensorFlow | Scikit-Learn | Streamlit | Google Colab | NLP | Machine Learning

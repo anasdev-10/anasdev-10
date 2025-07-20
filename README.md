@@ -1,4 +1,4 @@
-# Hi, I'm Mohammed Anas 👋
+# Hi, I'm Muhammed Anas 👋
 
 🎓 BS Artificial Intelligence | Passionate about AI, Computer Vision, and NLP  
 🚀 Currently building real-world AI projects.

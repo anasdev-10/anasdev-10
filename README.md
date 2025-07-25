@@ -4,7 +4,7 @@
 🚀 Currently building real-world AI projects.
 
 ## 🛠️ Tech Stack
-- Python | OpenCV | YOLO | TensorFlow | Scikit-Learn | Streamlit | Google Colab | NLP | Machine Learning
+- Python | Pytorch | YOLO | TensorFlow | Scikit-Learn | Streamlit | Google Colab | Docker 
 
 ## 📫 Contact Me
 - LinkedIn: www.linkedin.com/in/muhammad-anas10

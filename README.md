@@ -9,9 +9,9 @@
 
 ## 🛠️ Tech Stack
 **AI/ML:** TensorFlow, PyTorch, Scikit-learn
-|**CV:** OpenCV, Grad-CAM
-|**Deployment:** Flask, Docker, AWS 
-|**Tools:** Git, Jupyter, Colab
+| **CV:** OpenCV, Grad-CAM
+| **Deployment:** Flask, Docker, AWS 
+| **Tools:** Git, Jupyter, Colab
 
 
 ## 📫 Contact Me

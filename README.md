@@ -1,6 +1,6 @@
 # Hi, I'm Muhammad Anas 👋
 
-🎯 Aspiring AI Engineer | Deep Learning & Computer Vision Enthusiast  
+ Aspiring AI Engineer | Deep Learning & Computer Vision Enthusiast  
 
 💡 Passionate about building AI solutions that solve real-world problems.  
 🧠 Strong in Python, PyTorch, and model deployment (Flask, Docker, Hugging Face).  

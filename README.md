@@ -3,12 +3,12 @@
 🎯 Aspiring AI Engineer | Deep Learning & Computer Vision Enthusiast  
 
 💡 Passionate about building AI solutions that solve real-world problems.  
-🧠 Strong in Python, TensorFlow, PyTorch, and model deployment (Flask, Docker, Hugging Face).  
+🧠 Strong in Python, PyTorch, and model deployment (Flask, Docker, Hugging Face).  
 📌 Currently exploring and expanding my expertise in scalable AI pipelines.  
 
 
 ## 🛠️ Tech Stack
-**AI/ML:** TensorFlow, PyTorch, Scikit-learn
+**AI/ML:** Python, PyTorch, Scikit-learn
 | **CV:** OpenCV, Grad-CAM
 | **Deployment:** Flask, Docker, AWS 
 | **Tools:** Git, Jupyter, Colab

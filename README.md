@@ -2,9 +2,9 @@
 
  Aspiring AI Engineer | Deep Learning & Computer Vision Enthusiast  
 
- Passionate about building AI solutions that solve real-world problems.  
- Strong in Python, PyTorch, and model deployment (Flask, Docker, Hugging Face).  
- Currently exploring and expanding my expertise in scalable AI pipelines.  
+ • Passionate about building AI solutions that solve real-world problems.  
+ • Strong in Python, PyTorch, and model deployment (Flask, Docker, Hugging Face).  
+ • Currently exploring and expanding my expertise in scalable AI pipelines.  
 
 
 ## Tech Stack

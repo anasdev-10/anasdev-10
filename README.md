@@ -21,13 +21,3 @@
 ---
 > 💡 *Always learning, building, and improving.*
 
-## 🎮 My CodePet
-
-Meet Bytey, my coding companion that evolves with my GitHub activity!
-
-[![CodePet](https://img.shields.io/badge/🎮-Play%20with%20CodePet-16a085?style=for-the-badge)](https://anasdev-10.github.io/anasdev-10/codepet.html)
-
-Current Stats:
-- 🏆 Level: [Update manually]
-- 🔥 Streak: [Update manually] days
-- 📝 Total Commits Logged: [Update manually]

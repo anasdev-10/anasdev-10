@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodePet - Your GitHub Companion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #eee;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: #0f3460;
+            border: 4px solid #16a085;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            text-align: center;
+            color: #16a085;
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #aaa;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .pet-display {
+            background: #1a1a2e;
+            border: 3px solid #16a085;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .pet-canvas {
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .pet-name {
+            font-size: 24px;
+            color: #16a085;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .pet-stage {
+            font-size: 16px;
+            color: #aaa;
+            margin-top: 5px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .stat-box {
+            background: #1a1a2e;
+            border: 2px solid #16a085;
+            border-radius: 6px;
+            padding: 15px;
+        }
+
+        .stat-label {
+            color: #16a085;
+            font-size: 12px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .progress-bar {
+            background: #1a1a2e;
+            border: 2px solid #16a085;
+            border-radius: 6px;
+            padding: 10px;
+            margin-bottom: 25px;
+        }
+
+        .progress-label {
+            color: #16a085;
+            font-size: 12px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .progress-fill-container {
+            background: #0f3460;
+            height: 20px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #16a085, #1abc9c);
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        .actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #16a085;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #1abc9c;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .activity-log {
+            background: #1a1a2e;
+            border: 2px solid #16a085;
+            border-radius: 6px;
+            padding: 15px;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+
+        .activity-log h3 {
+            color: #16a085;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .log-entry {
+            font-size: 12px;
+            color: #aaa;
+            padding: 5px 0;
+            border-bottom: 1px solid #0f3460;
+        }
+
+        .log-entry:last-child {
+            border-bottom: none;
+        }
+
+        .achievement {
+            background: #16a085;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            text-align: center;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 CodePet</h1>
+        <div class="subtitle">Your retro coding companion grows with your GitHub activity!</div>
+
+        <div id="achievement" class="achievement hidden"></div>
+
+        <div class="pet-display">
+            <canvas id="petCanvas" class="pet-canvas" width="128" height="128"></canvas>
+            <div class="pet-name" id="petName">Bytey</div>
+            <div class="pet-stage" id="petStage">Egg Stage</div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-label">Commits</div>
+                <div class="stat-value" id="commits">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Streak</div>
+                <div class="stat-value" id="streak">0 days</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Total XP</div>
+                <div class="stat-value" id="totalXP">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Level</div>
+                <div class="stat-value" id="level">1</div>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-label">
+                <span>Next Evolution</span>
+                <span id="xpText">0 / 50 XP</span>
+            </div>
+            <div class="progress-fill-container">
+                <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button onclick="logCommit()">📝 Log Commit</button>
+            <button onclick="logPR()">🔀 Merge PR</button>
+            <button onclick="logCodeReview()">👀 Code Review</button>
+            <button onclick="logBugFix()">🐛 Bug Fix</button>
+        </div>
+
+        <div class="activity-log">
+            <h3>Recent Activity</h3>
+            <div id="logContainer"></div>
+        </div>
+    </div>
+
+    <script>
+        // Game state
+        let state = {
+            xp: 0,
+            totalXP: 0,
+            level: 1,
+            commits: 0,
+            streak: 0,
+            lastActivity: null,
+            stage: 0, // 0: egg, 1: hatchling, 2: juvenile, 3: adult, 4: master
+            logs: []
+        };
+
+        // XP thresholds for evolution
+        const evolutions = [
+            { name: 'Egg', xpNeeded: 50 },
+            { name: 'Hatchling', xpNeeded: 150 },
+            { name: 'Juvenile', xpNeeded: 300 },
+            { name: 'Adult', xpNeeded: 500 },
+            { name: 'Code Master', xpNeeded: Infinity }
+        ];
+
+        // Load state from localStorage
+        function loadState() {
+            const saved = localStorage.getItem('codepet');
+            if (saved) {
+                state = JSON.parse(saved);
+                updateUI();
+            }
+        }
+
+        // Save state to localStorage
+        function saveState() {
+            localStorage.setItem('codepet', JSON.stringify(state));
+        }
+
+        // Draw pixel art pet based on stage
+        function drawPet() {
+            const canvas = document.getElementById('petCanvas');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, 128, 128);
+
+            const size = 8;
+            const colors = {
+                primary: '#16a085',
+                secondary: '#1abc9c',
+                accent: '#f39c12',
+                dark: '#0f3460',
+                eye: '#fff'
+            };
+
+            // Center offset
+            const offsetX = 32;
+            const offsetY = 24;
+
+            function pixel(x, y, color) {
+                ctx.fillStyle = color;
+                ctx.fillRect((x + offsetX) * size, (y + offsetY) * size, size, size);
+            }
+
+            if (state.stage === 0) {
+                // Egg
+                const egg = [
+                    [0,0,1,1,1,1,0,0],
+                    [0,1,1,1,1,1,1,0],
+                    [1,1,2,1,1,2,1,1],
+                    [1,1,1,1,1,1,1,1],
+                    [1,1,1,1,1,1,1,1],
+                    [1,1,1,1,1,1,1,1],
+                    [0,1,1,1,1,1,1,0],
+                    [0,0,1,1,1,1,0,0]
+                ];
+                egg.forEach((row, y) => {
+                    row.forEach((val, x) => {
+                        if (val === 1) pixel(x, y, colors.primary);
+                        if (val === 2) pixel(x, y, colors.accent);
+                    });
+                });
+            } else if (state.stage === 1) {
+                // Hatchling
+                const pet = [
+                    [0,0,1,1,1,1,0,0],
+                    [0,1,3,1,1,3,1,0],
+                    [0,1,3,1,1,3,1,0],
+                    [0,1,1,1,1,1,1,0],
+                    [0,1,2,2,2,2,1,0],
+                    [1,1,1,1,1,1,1,1],
+                    [1,0,1,0,0,1,0,1],
+                    [0,0,1,0,0,1,0,0]
+                ];
+                pet.forEach((row, y) => {
+                    row.forEach((val, x) => {
+                        if (val === 1) pixel(x, y, colors.primary);
+                        if (val === 2) pixel(x, y, colors.secondary);
+                        if (val === 3) pixel(x, y, colors.eye);
+                    });
+                });
+            } else if (state.stage === 2) {
+                // Juvenile
+                const pet = [
+                    [0,0,1,1,1,1,0,0],
+                    [0,1,3,1,1,3,1,0],
+                    [0,1,4,1,1,4,1,0],
+                    [0,1,1,1,1,1,1,0],
+                    [1,1,2,2,2,2,1,1],
+                    [1,1,1,1,1,1,1,1],
+                    [1,0,1,1,1,1,0,1],
+                    [0,0,1,0,0,1,0,0]
+                ];
+                pet.forEach((row, y) => {
+                    row.forEach((val, x) => {
+                        if (val === 1) pixel(x, y, colors.primary);
+                        if (val === 2) pixel(x, y, colors.secondary);
+                        if (val === 3) pixel(x, y, colors.eye);
+                        if (val === 4) pixel(x, y, colors.accent);
+                    });
+                });
+            } else if (state.stage === 3) {
+                // Adult
+                const pet = [
+                    [0,1,0,0,0,0,1,0],
+                    [0,1,1,1,1,1,1,0],
+                    [0,1,3,1,1,3,1,0],
+                    [0,1,4,1,1,4,1,0],
+                    [1,1,2,2,2,2,1,1],
+                    [1,1,1,2,2,1,1,1],
+                    [1,0,1,1,1,1,0,1],
+                    [1,0,1,0,0,1,0,1]
+                ];
+                pet.forEach((row, y) => {
+                    row.forEach((val, x) => {
+                        if (val === 1) pixel(x, y, colors.primary);
+                        if (val === 2) pixel(x, y, colors.secondary);
+                        if (val === 3) pixel(x, y, colors.eye);
+                        if (val === 4) pixel(x, y, colors.accent);
+                    });
+                });
+            } else if (state.stage >= 4) {
+                // Code Master
+                const pet = [
+                    [0,1,1,0,0,1,1,0],
+                    [0,1,1,1,1,1,1,0],
+                    [0,1,3,1,1,3,1,0],
+                    [0,1,4,2,2,4,1,0],
+                    [1,1,2,2,2,2,1,1],
+                    [1,1,1,2,2,1,1,1],
+                    [1,0,1,1,1,1,0,1],
+                    [1,1,1,0,0,1,1,1]
+                ];
+                pet.forEach((row, y) => {
+                    row.forEach((val, x) => {
+                        if (val === 1) pixel(x, y, colors.primary);
+                        if (val === 2) pixel(x, y, colors.secondary);
+                        if (val === 3) pixel(x, y, colors.eye);
+                        if (val === 4) pixel(x, y, colors.accent);
+                    });
+                });
+            }
+        }
+
+        // Add XP and check for evolution
+        function addXP(amount, activity) {
+            state.xp += amount;
+            state.totalXP += amount;
+            
+            // Check for level up
+            const currentEvolution = evolutions[state.stage];
+            if (state.xp >= currentEvolution.xpNeeded && state.stage < evolutions.length - 1) {
+                state.stage++;
+                state.xp = 0;
+                state.level++;
+                showAchievement(`🎉 ${evolutions[state.stage].name} evolved!`);
+            }
+
+            addLog(activity);
+            updateStreak();
+            updateUI();
+            saveState();
+        }
+
+        // Update streak
+        function updateStreak() {
+            const today = new Date().toDateString();
+            if (state.lastActivity !== today) {
+                const yesterday = new Date();
+                yesterday.setDate(yesterday.getDate() - 1);
+                if (state.lastActivity === yesterday.toDateString()) {
+                    state.streak++;
+                } else if (state.lastActivity !== null) {
+                    state.streak = 1;
+                } else {
+                    state.streak = 1;
+                }
+                state.lastActivity = today;
+            }
+        }
+
+        // Activity functions
+        function logCommit() {
+            state.commits++;
+            addXP(10, '📝 Committed code');
+        }
+
+        function logPR() {
+            addXP(25, '🔀 Merged pull request');
+        }
+
+        function logCodeReview() {
+            addXP(15, '👀 Reviewed code');
+        }
+
+        function logBugFix() {
+            addXP(20, '🐛 Fixed a bug');
+        }
+
+        // Add log entry
+        function addLog(text) {
+            const timestamp = new Date().toLocaleTimeString();
+            state.logs.unshift({ time: timestamp, text });
+            if (state.logs.length > 10) state.logs.pop();
+            
+            const container = document.getElementById('logContainer');
+            container.innerHTML = state.logs
+                .map(log => `<div class="log-entry">[${log.time}] ${log.text}</div>`)
+                .join('');
+        }
+
+        // Show achievement
+        function showAchievement(text) {
+            const achievement = document.getElementById('achievement');
+            achievement.textContent = text;
+            achievement.classList.remove('hidden');
+            setTimeout(() => {
+                achievement.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Update UI
+        function updateUI() {
+            document.getElementById('commits').textContent = state.commits;
+            document.getElementById('streak').textContent = `${state.streak} days`;
+            document.getElementById('totalXP').textContent = state.totalXP;
+            document.getElementById('level').textContent = state.level;
+            document.getElementById('petStage').textContent = `${evolutions[state.stage].name} Stage`;
+            
+            const nextEvolution = evolutions[state.stage];
+            const progress = (state.xp / nextEvolution.xpNeeded) * 100;
+            document.getElementById('progressFill').style.width = `${Math.min(progress, 100)}%`;
+            document.getElementById('xpText').textContent = 
+                `${state.xp} / ${nextEvolution.xpNeeded === Infinity ? '∞' : nextEvolution.xpNeeded} XP`;
+            
+            drawPet();
+        }
+
+        // Initialize
+        loadState();
+        drawPet();
+        updateUI();
+    </script>
+</body>
+</html>

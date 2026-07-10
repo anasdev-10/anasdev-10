@@ -1,11 +1,20 @@
-<h1 align="center">Muhammad Anas</h1>
+<h1 align="center">Muhammad Anas 👋</h1>
 <h3 align="center">AI/ML Engineer</h3>
 
 ---
 
 ### About 🎯
 
-I work on machine learning, Agentic and computer vision, with an interest in taking systems beyond notebooks — into deployed, working applications. I'm comfortable across the stack: model development, backend APIs, and deployment.
+I work on machine learning and computer vision, with an interest in taking systems beyond notebooks — into deployed, working applications. I'm comfortable across the stack: model development, backend APIs, and deployment.
+
+---
+
+### Highlights ✨
+
+- Built and deployed multimodal search systems combining vision-language models with vector databases
+- Worked with LLM-based agents and multi-agent orchestration for practical use cases
+- Trained and deployed computer vision models for classification tasks
+- Experience taking ML models from experimentation to production APIs
 
 ---
 

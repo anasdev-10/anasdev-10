@@ -1,27 +1,15 @@
-<h1 align="center">Hi 👋, I'm Muhammad Anas</h1>
-<h3 align="center">AI Engineer | Machine Learning & Deep Learning | Building Real-World AI Products</h3>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=muhammad-anas10&label=Profile%20views&color=0e75b6&style=flat" alt="profile views" />
-</p>
+<h1 align="center">Muhammad Anas</h1>
+<h3 align="center">AI/ML Engineer</h3>
 
 ---
 
-### 🚀 About Me
-- 🎓 BS Artificial Intelligence graduate, passionate about turning ML models into production-ready products
-- 🧠 Focused on **Generative AI, Computer Vision, and Multi-Agent Systems**
-- 🛠️ I like building end-to-end AI pipelines — from model to deployed, usable application
-- 🌱 Currently exploring **multimodal search, LLM agents, and scalable AI infrastructure**
-- 🎯 Actively looking for opportunities as an **AI/ML Engineer**
+### About 🎯
+
+I work on machine learning, Agentic and computer vision, with an interest in taking systems beyond notebooks — into deployed, working applications. I'm comfortable across the stack: model development, backend APIs, and deployment.
 
 ---
 
-### 💡 What I Build
-I enjoy designing systems that combine multiple AI capabilities — search, retrieval, agents, and vision — into practical tools that solve real problems, from intelligent shopping assistants to crop disease detection.
-
----
-
-### 🧰 Tech Stack
+### Tech Stack 🧠
 
 **Languages & Core ML**
 <p>
@@ -56,24 +44,7 @@ I enjoy designing systems that combine multiple AI capabilities — search, retr
 
 ---
 
-### 🔧 Featured Projects
+### Contact 📬
 
-- **Findify** — A multimodal product search app combining vision-language models with vector search for image + text based e-commerce discovery
-- **MCP-Based SQL Data Analyst** — A natural-language-to-SQL analytics agent built on the Model Context Protocol
-- **AI Shopping Advisor** — A multi-agent LangGraph system that reasons through product recommendations
-- **KisanAI** — A deep learning model for crop disease classification to support farmers
-
----
-
-### 📫 Let's Connect
-
-<p align="center">
-  <a href="https://www.linkedin.com/in/muhammad-anas10" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
-  </a>
-  <a href="mailto:miananas.info@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
-  </a>
-</p>
-
-<p align="center"><i>💡 Always learning, building, and improving.</i></p>
+- LinkedIn: [linkedin.com/in/muhammad-anas10](https://www.linkedin.com/in/muhammad-anas10)
+- Email: miananas.info@gmail.com

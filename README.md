@@ -1,4 +1,4 @@
-<h1 align="center">Muhammad Anas 👋</h1>
+<h1 align="center">Muhammad Anas</h1>
 <h3 align="center">AI/ML Engineer</h3>
 
 ---
@@ -27,7 +27,7 @@ I've worked on projects spanning multimodal search systems, LLM-powered tools, m
   <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
 </p>
 
-**AI Frameworks**
+**AI Frameworks & Tools**
 <p>
   <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white"/>
@@ -39,6 +39,7 @@ I've worked on projects spanning multimodal search systems, LLM-powered tools, m
 <p>
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MongoDB-4169E1?style=for-the-badge&logo=mongodb&logoColor=white"/>
   <img src="https://img.shields.io/badge/Weaviate-FF6B6B?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white"/>
 </p>

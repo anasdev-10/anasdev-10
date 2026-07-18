@@ -5,7 +5,7 @@
 
 ### About 🎯
 
-I work on machine learning and computer vision, with an interest in taking systems beyond notebooks — into deployed, working applications. I'm comfortable across the stack: model development, backend APIs, and deployment.
+I've worked on projects spanning multimodal search systems, LLM-powered tools, multi-agent AI applications, and computer vision. My toolkit includes Python, PyTorch, scikit-learn, LangGraph, vector databases, data processing libraries, and FastAPI for building and serving models. I like building systems that solves real world problems. My goal is to keep deepening my skills and grow within the AI/ML domain, through opportunities that push me to build real, production-grade systems.
 
 ---
 

@@ -27,7 +27,7 @@ I've worked on projects spanning multimodal search systems, LLM-powered tools, m
   <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
 </p>
 
-**AI Applications**
+**AI Frameworks**
 <p>
   <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white"/>
@@ -47,8 +47,7 @@ I've worked on projects spanning multimodal search systems, LLM-powered tools, m
 <p>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
   <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GitHub-F05032?style=for-the-badge&logo=git&logoColor=white"/>
 </p>
 
 ---
